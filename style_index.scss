@@ -1,0 +1,30 @@
+@import "Utils/variables";
+
+body{
+    margin-left: auto;
+    margin-right: auto;
+    width: 425px;
+}
+.logo_container{
+    width: 100%;
+    text-align: center;
+        img{
+            width: 50%;
+        }
+}
+.barre_recherche{
+    width: 100%;
+    border: solid 0.2px gray;
+    text-align: center;
+    input{
+        border: none;
+        width: 100px;
+        font-weight: bold;
+        font-size: 13px;
+    }
+}
+.photo_restaurant{
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+}

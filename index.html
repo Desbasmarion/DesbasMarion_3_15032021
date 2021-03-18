@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>OhMyFood</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style_index.css" />
   <link rel="icon" href="ohmyfood..ico" />
   <script src="https://kit.fontawesome.com/5521a522f0.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +12,13 @@
 
 <body>
     <header>
-      <img src="logo/ohmyfood.png" alt="logo" class="logo">
-      <input type="search">
+      <div class="logo_container">
+        <img src="logo/ohmyfood.png" alt="logo">
+      </div>
+      <div class="barre_recherche">
+        <i class="fas fa-map-marker-alt"></i>
+        <input type="search" name="recherche_ville" placeholder="Paris, Belleville">
+      </div>
       <h1>Réservez le menu qui vous convient</h1>
       <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
       <input type="button">
@@ -67,7 +72,7 @@
       </div>
       <div class="vignette_restaurant">
         <a href="delice_des_sens.html">
-          <img src="restaurants/delice_des_sens.jpg" alt="restaurant" class="restaurant">
+          <img src="restaurants/delice_des_sens.jpg" alt="restaurant" class="photo_restaurant">
           <h3>Le délice des sens</h3>
           <p>Folie-Méricourt</p>
           <i class="far fa-heart"></i>

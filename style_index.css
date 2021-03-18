@@ -1,0 +1,32 @@
+body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 425px;
+}
+
+.logo_container {
+  width: 100%;
+  text-align: center;
+}
+.logo_container img {
+  width: 50%;
+}
+
+.barre_recherche {
+  width: 100%;
+  border: solid 0.2px gray;
+  text-align: center;
+}
+.barre_recherche input {
+  border: none;
+  width: 100px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.photo_restaurant {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 200px;
+}/*# sourceMappingURL=style_index.css.map */
