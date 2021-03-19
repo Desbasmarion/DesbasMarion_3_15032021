@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "robotoregular";
+  src: url("Roboto-Regular-webfont.eot");
+  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff2") format("woff2"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: robotoregular;
+}
+
 body {
   margin-left: auto;
   margin-right: auto;
@@ -37,8 +48,36 @@ body {
   text-align: center;
 }
 .en_tete h1 {
-  margin-top: 0;
+  margin: 0;
+  font-size: 30px;
+  padding-top: 30px;
+}
+.en_tete :nth-child(2) {
+  padding-top: 0;
+}
+.en_tete p {
   font-size: 20px;
+}
+.en_tete button {
+  background-color: #9356DC;
+  color: white;
+  height: 45px;
+  width: 250px;
+  border-radius: 50px;
+  border: 0;
+  cursor: pointer;
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+
+.presentation_fonctionnement h2 {
+  margin-top: 50px;
+}
+
+.onglet_fonctionnement {
+  border: red solid;
+  display: flex;
+  justify-content: space-around;
 }
 
 .photo_restaurant {
