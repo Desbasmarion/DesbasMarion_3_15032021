@@ -1,0 +1,12 @@
+@mixin button {
+    background-color: $couleur_primaire;
+        box-shadow: $box-shadow_vignettes;
+        color: white;
+        height: 50px;
+        width: 250px;
+        border-radius: 50px;
+        border: 0;
+        cursor: pointer;
+        margin-bottom: 50px;
+        font-size: 18px;
+}

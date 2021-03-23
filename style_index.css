@@ -5,6 +5,7 @@ footer {
   padding-left: 5%;
   padding-top: 8%;
   padding-bottom: 8%;
+  line-height: 30px;
 }
 footer .logo_footer {
   width: 35%;
@@ -17,6 +18,7 @@ footer .proposer_restaurant, footer .partenaire {
   width: 52%;
   justify-content: space-between;
   height: 30px;
+  font-weight: 550;
 }
 footer .partenaire {
   width: 43%;
@@ -46,10 +48,11 @@ footer p {
   top: -50px;
   padding-right: 5%;
   padding-left: 5%;
+  margin-bottom: -50px;
 }
 .menu_restaurant h1 {
   margin: 0;
-  padding-top: 20px;
+  padding-top: 40px;
   font-family: shrikhand;
 }
 .menu_restaurant i {
@@ -60,27 +63,58 @@ footer p {
 }
 .menu_restaurant h2 {
   margin: 0;
+  font-size: 17px;
+  margin-bottom: 20px;
+  border-bottom: solid #99E2D0 3px;
+  margin-top: 30px;
 }
 
 .vignette_menu {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 6px 10px #DDDDDD;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 7px;
+  line-height: 25px;
 }
-.vignette_menu p {
+.vignette_menu > p {
   margin: 0;
   margin-left: 5px;
+  font-weight: 900;
 }
 .vignette_menu .ligne2_menu {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 95%;
 }
 .vignette_menu .ligne2_menu p {
   margin: 0;
   margin-left: 5px;
+}
+.vignette_menu .ligne2_menu :nth-child(2) {
+  font-weight: 900;
+}
+
+.bouton_commande {
+  text-align: center;
+  margin-top: 50px;
+}
+.bouton_commande button {
+  background-color: #9356DC;
+  box-shadow: 0px 6px 10px #DDDDDD;
+  color: white;
+  height: 50px;
+  width: 250px;
+  border-radius: 50px;
+  border: 0;
+  cursor: pointer;
+  margin-bottom: 50px;
+  font-size: 18px;
+  align-self: center;
 }
 
 @font-face {
