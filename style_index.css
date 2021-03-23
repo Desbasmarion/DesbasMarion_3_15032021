@@ -28,9 +28,19 @@ footer p {
   margin-bottom: 5px;
 }
 
+.ligne1 {
+  display: flex;
+}
+.ligne1 .retour_accueil {
+  text-decoration: none;
+  color: black;
+}
+
 .photo_page_restaurant {
   width: 100%;
   height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .logo_menus {
