@@ -1,3 +1,81 @@
+@-webkit-keyframes apparition_menu {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  25% {
+    opacity: 0.2;
+    transform: translateY(6px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(4px);
+  }
+  75% {
+    opacity: 0.7;
+    transform: translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes apparition_menu {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  25% {
+    opacity: 0.2;
+    transform: translateY(6px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(4px);
+  }
+  75% {
+    opacity: 0.7;
+    transform: translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes loading_spinner {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  75% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: translateY(8px);
+  }
+}
+@keyframes loading_spinner {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  75% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: translateY(8px);
+  }
+}
 footer {
   background-color: #353535;
   color: white;
@@ -90,6 +168,11 @@ footer p {
   justify-content: center;
   padding-left: 7px;
   line-height: 25px;
+  -webkit-animation: apparition_menu 0.7s 0.4s;
+          animation: apparition_menu 0.7s 0.4s;
+  opacity: 0;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 .vignette_menu > p {
   margin: 0;
@@ -114,7 +197,7 @@ footer p {
   margin-top: 50px;
 }
 .bouton_commande button {
-  background-color: #9356DC;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
   box-shadow: 0px 6px 10px #DDDDDD;
   color: white;
   height: 50px;
@@ -146,6 +229,30 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 425px;
+}
+
+.spinner1 {
+  -webkit-animation: loading_spinner 0.4s;
+          animation: loading_spinner 0.4s;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  color: #9356DC;
+}
+
+.spinner2 {
+  -webkit-animation: loading_spinner 0.5s;
+          animation: loading_spinner 0.5s;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  color: #FF79DA;
+}
+
+.spinner3 {
+  -webkit-animation: loading_spinner 0.6s;
+          animation: loading_spinner 0.6s;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  color: #99E2D0;
 }
 
 .logo_container {
@@ -192,7 +299,7 @@ body {
   font-size: 20px;
 }
 .en_tete button {
-  background-color: #9356DC;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
   box-shadow: 0px 6px 10px #DDDDDD;
   color: white;
   height: 45px;
@@ -225,6 +332,10 @@ body {
   background-color: #F6F6F6;
   box-shadow: 0px 6px 10px #DDDDDD;
 }
+.onglet_fonctionnement:hover {
+  background-color: #F5EDFF;
+  color: #9356DC;
+}
 .onglet_fonctionnement li {
   width: 80%;
   display: flex;
@@ -232,6 +343,11 @@ body {
 }
 .onglet_fonctionnement li p {
   margin: 0;
+  font-weight: 700;
+  text-align: left;
+}
+.onglet_fonctionnement i:hover {
+  color: #9356DC;
 }
 
 .liste_restaurants {
@@ -262,10 +378,36 @@ body {
   margin: 0;
   margin-left: 8px;
 }
+.vignette_restaurant .new {
+  width: 75px;
+  height: 20px;
+  text-align: center;
+  background-color: #99E2D0;
+  font-weight: 700;
+  color: #048A69;
+  font-size: 14px;
+  position: relative;
+  bottom: 210px;
+  left: 275px;
+}
 .vignette_restaurant .photo_restaurant {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   height: 70%;
   border-radius: 30px 30px 0 0;
+}
+.vignette_restaurant .coeur_plein {
+  position: relative;
+  right: 20px;
+  color: transparent;
+  opacity: 0;
+  transition-duration: 0.4s;
+  transition-property: opacity;
+}
+.vignette_restaurant .coeur_plein:hover {
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  opacity: 1;
 }/*# sourceMappingURL=style_index.css.map */

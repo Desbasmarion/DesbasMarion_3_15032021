@@ -1,7 +1,9 @@
 @import "Utils/variables";
 @import "Utils/mixins";
+@import "Base/keyframes";
 @import "Layout/footer";
 @import "Layout/menus";
+
 
 @font-face {
     font-family: 'robotoregular';
@@ -27,6 +29,23 @@ body{
     margin-right: auto;
     width: 425px;
 }
+.spinner1{
+    animation: loading_spinner 0.4s;
+    animation-iteration-count: 3;
+    color: $couleur_primaire;
+}
+.spinner2{
+    animation: loading_spinner 0.5s;
+    animation-iteration-count: 3;
+    color: $couleur_secondaire
+}
+.spinner3{
+    animation: loading_spinner 0.6s;
+    animation-iteration-count: 3;
+    color: $couleur_tertiaire;
+}
+
+
 .logo_container{
     width: 100%;
     text-align: center;
@@ -68,7 +87,7 @@ body{
         font-size: 20px;
     }
     button{
-        background-color: $couleur_primaire;
+        background: $background_button;
         box-shadow: $box-shadow_vignettes;
         color: white;
         height: 45px;
@@ -99,13 +118,22 @@ body{
     height: 60px;
     background-color: $background_color;
     box-shadow: 0px 6px 10px #DDDDDD;
+    &:hover{
+        background-color: #F5EDFF;
+        color: $couleur_primaire;
+    }
     li{
         width: 80%;
         display: flex;
         justify-content: space-around;
         p{
             margin: 0;
+            font-weight: 700;
+            text-align:left;
         }
+    }
+    i:hover{
+        color: $couleur_primaire;
     }
 }
 .liste_restaurants{
@@ -134,11 +162,35 @@ body{
         margin: 0;
         margin-left: 8px;
     }
+    .new{
+        width: 75px;
+        height: 20px;
+        text-align: center;
+        background-color: $couleur_tertiaire;
+        font-weight: 700;
+        color: #048A69;
+        font-size: 14px;
+        position: relative;
+        bottom: 210px;
+        left: 275px;
+    }
     .photo_restaurant{
     width: 100%;
     object-fit: cover;
     height: 70%;
     border-radius: 30px 30px 0 0;
     }
+    .coeur_plein{
+        position: relative;
+        right: 20px;
+        color: transparent;  
+        opacity: 0;
+        transition-duration: 0.4s;
+        transition-property: opacity;
+        &:hover{
+            background-image: linear-gradient($couleur_primaire, $couleur_secondaire);
+            background-clip: text;
+            opacity: 1;
+        }
+    }
 }
-

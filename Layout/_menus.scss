@@ -55,6 +55,9 @@
     justify-content: center;
     padding-left: 7px;
     line-height: 25px;
+    animation: apparition_menu 0.7s 0.4s;
+    opacity: 0;
+    animation-fill-mode: both;
     >p{
         margin: 0;
         margin-left: 5px;
