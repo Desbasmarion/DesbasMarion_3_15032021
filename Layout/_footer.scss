@@ -17,7 +17,10 @@ footer{
         width: 52%;
         justify-content: space-between;
         height: 30px;
-        font-weight: 550;
+        font-weight: 600;
+        &:hover{
+            color: $couleur_tertiaire;
+        }
     }
     .partenaire{
         width: 43%;
@@ -25,5 +28,15 @@ footer{
     p{
         margin-top: 5px;
         margin-bottom: 5px;
+        &:hover{
+            color: $couleur_tertiaire;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        &:hover{
+            color: $couleur_tertiaire;
+        }
     }
 }

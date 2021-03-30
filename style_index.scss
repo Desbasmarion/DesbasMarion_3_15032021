@@ -29,6 +29,8 @@ body{
     margin-right: auto;
     width: 425px;
 }
+
+/*loading spinner*/
 .loadingspinner{
     height: 100%;
     width: 425px;
@@ -38,7 +40,6 @@ body{
     align-items: center;
     animation: background_loading_spinner 2.5s;
     animation-timing-function: cubic-bezier(.03,.61,.92,.69);
-
 }
 .spinner1{
     animation: loading_spinner 0.3s 0.2s;
@@ -88,8 +89,7 @@ body{
     animation-direction: alternate;
     transform: translate(-2000px); 
 }
-
-
+/*fin loading spinner*/
 
 .logo_container{
     width: 100%;
@@ -154,9 +154,6 @@ body{
     h2{
         margin-top: 50px;
     }
-    ol{
-        padding-left: 0;
-    }
 }
 .onglet_fonctionnement{
     border: none;
@@ -167,22 +164,29 @@ body{
     height: 60px;
     background-color: $background_color;
     box-shadow: 0px 6px 10px #DDDDDD;
+    justify-content: space-around;
     &:hover{
         background-color: #F5EDFF;
         color: $couleur_primaire;
     }
-    li{
-        width: 80%;
-        display: flex;
-        justify-content: space-around;
-        p{
-            margin: 0;
-            font-weight: 700;
-            text-align:left;
-        }
+    span{
+        border: solid;
+        border-radius: 50px;
+        color: white;
+        background-color: $couleur_primaire;
+        width: 22px;
+        height: 22px;
+        text-align: center;
+        position: relative;
+        right: 40px;
     }
-    i:hover{
-        color: $couleur_primaire;
+    i{
+        position: relative;
+        right: 60px;
+    }
+    p{
+        position: relative;
+        right: 80px;
     }
 }
 .liste_restaurants{
@@ -209,12 +213,12 @@ body{
     h3, p{
         color: black;
         margin: 0;
-        margin-left: 8px;
+        margin-left: 10px;
+        margin-top: 5px;
     }
     .new{
         width: 75px;
-        height: 20px;
-        text-align: center;
+        height: 30px;
         background-color: $couleur_tertiaire;
         font-weight: 700;
         color: #048A69;
@@ -222,6 +226,9 @@ body{
         position: relative;
         bottom: 210px;
         left: 275px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .photo_restaurant{
     width: 100%;
@@ -229,9 +236,25 @@ body{
     height: 70%;
     border-radius: 30px 30px 0 0;
     }
-    .coeur_plein{
+    .coeur_vide{
+        font-size: 25px;
         position: relative;
-        right: 20px;
+        bottom: 35px;
+        left: 330px;
+        color: black;
+    }
+    .coeur_vide_new{
+        font-size: 25px;
+        position: relative;
+        bottom: 70px;
+        left: 330px;
+        color: black;
+    }
+    .coeur_plein{
+        font-size: 25px;
+        position: relative;
+        left: 301px;
+        bottom: 35px;
         color: transparent;  
         opacity: 0;
         transition-duration: 0.4s;
@@ -241,5 +264,63 @@ body{
             background-clip: text;
             opacity: 1;
         }
+    }
+    .coeur_plein_new{
+        font-size: 25px;
+        position: relative;
+        left: 301px;
+        bottom: 70px;
+        color: transparent;  
+        opacity: 0;
+        transition-duration: 0.4s;
+        transition-property: opacity;
+        &:hover{
+            background-image: linear-gradient($couleur_primaire, $couleur_secondaire);
+            background-clip: text;
+            opacity: 1;
+        }
+    }
+}
+@media screen and (min-width: 426px){
+    body{
+        width: 1200px;
+        max-width: 1200px;
+    }
+    .container_fonctionnement, .container_restaurants{
+        display: flex;
+        max-width: 1200px;
+        justify-content: space-between;
+    }
+    .liste_restaurants{
+        padding-left: 2%;
+        padding-right: 2%;
+        .vignette_restaurant{
+            max-width: 23%;
+        }
+    }
+    .onglet_fonctionnement{
+        width: 30%;
+    }
+    footer{
+        padding: 2%;
+        text-align: center;
+        .logo_footer{
+            width: 25%;
+        }
+        .proposer_restaurant{
+            justify-content: center;
+            width: auto;
+            i{
+                padding-right: 10px;
+            }
+        }
+        .partenaire{
+            justify-content: center;
+            width: auto;
+            i{
+                padding-right: 10px;
+            }
+        }
+
     }
 }

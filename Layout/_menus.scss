@@ -17,6 +17,19 @@
         width: 50%;
     }
 }
+.coeur_plein{
+    position: relative;
+    right: 20px;
+    color: transparent;  
+    opacity: 0;
+    transition-duration: 0.4s;
+    transition-property: opacity;
+    &:hover{
+        background-image: linear-gradient($couleur_primaire, $couleur_secondaire);
+        background-clip: text;
+        opacity: 1;
+    }
+}
 .menu_restaurant{
     background-color: $background_color;
     border-radius: 30px 30px 0 0;
@@ -95,5 +108,11 @@
     animation-delay: 1s;
     &:hover{
         transform: rotate(180deg);
+    }
+}
+@media screen and (min-width: 426px){
+    body{
+        width: 1200px;
+        max-width: 1200px;
     }
 }
