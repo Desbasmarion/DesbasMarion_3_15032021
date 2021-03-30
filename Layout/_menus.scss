@@ -45,7 +45,7 @@
     }
 }
 .vignette_menu{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 15px;
     box-shadow: $box-shadow_vignettes;
     margin-bottom: 20px;
@@ -55,7 +55,7 @@
     justify-content: center;
     padding-left: 7px;
     line-height: 25px;
-    animation: apparition_menu 0.7s 0.4s;
+    animation: apparition_menu 1s 0.5s;
     opacity: 0;
     animation-fill-mode: both;
     >p{
@@ -80,7 +80,20 @@
     text-align: center;
     margin-top: 50px;
     button{
-    @include button;
-    align-self: center;
+        @include button;
+        align-self: center;
+        &:hover{
+            background: $background_button_hover;
+            box-shadow: $box-shadow_hover;
+        }
+    }  
+}
+
+.icone_check{
+    animation-name: check_menu;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    &:hover{
+        transform: rotate(180deg);
     }
 }
