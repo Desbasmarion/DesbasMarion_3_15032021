@@ -3,6 +3,8 @@
     .retour_accueil{
         text-decoration: none;
         color: black;
+        font-size: 20px;
+        margin-left: 10px;
     }
 }
 .photo_page_restaurant{
@@ -15,19 +17,6 @@
     text-align: center;
     img{
         width: 50%;
-    }
-}
-.coeur_plein{
-    position: relative;
-    right: 20px;
-    color: transparent;  
-    opacity: 0;
-    transition-duration: 0.4s;
-    transition-property: opacity;
-    &:hover{
-        background-image: linear-gradient($couleur_primaire, $couleur_secondaire);
-        background-clip: text;
-        opacity: 1;
     }
 }
 .menu_restaurant{
@@ -43,18 +32,22 @@
         padding-top: 40px;
         font-family: shrikhand;
     }
-    i{
-        position: relative;
-        left: 340px;
-        top: -32px;
-        font-size: 25px;
+    .coeur_vide_menu{
+        @include coeur_vide
+    }
+    .coeur_plein_menu{
+        @include coeur_plein
     }
     h2{
         margin: 0;
         font-size: 17px;
-        margin-bottom: 20px;
-        border-bottom: solid $couleur_tertiaire 3px;
         margin-top: 30px;
+    }
+    .border_titre{
+        border-bottom: solid $couleur_tertiaire;
+        margin-bottom: 20px;
+        width: 45px;
+        border-width: 3px;
     }
 }
 .vignette_menu{
@@ -102,17 +95,3 @@
     }  
 }
 
-.icone_check{
-    animation-name: check_menu;
-    animation-duration: 1s;
-    animation-delay: 1s;
-    &:hover{
-        transform: rotate(180deg);
-    }
-}
-@media screen and (min-width: 426px){
-    body{
-        width: 1200px;
-        max-width: 1200px;
-    }
-}

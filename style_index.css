@@ -133,6 +133,8 @@ footer a:hover {
 .ligne1 .retour_accueil {
   text-decoration: none;
   color: black;
+  font-size: 20px;
+  margin-left: 10px;
 }
 
 .photo_page_restaurant {
@@ -150,21 +152,6 @@ footer a:hover {
   width: 50%;
 }
 
-.coeur_plein {
-  position: relative;
-  right: 20px;
-  color: transparent;
-  opacity: 0;
-  transition-duration: 0.4s;
-  transition-property: opacity;
-}
-.coeur_plein:hover {
-  background-image: linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-          background-clip: text;
-  opacity: 1;
-}
-
 .menu_restaurant {
   background-color: #F6F6F6;
   border-radius: 30px 30px 0 0;
@@ -179,18 +166,39 @@ footer a:hover {
   padding-top: 40px;
   font-family: shrikhand;
 }
-.menu_restaurant i {
-  position: relative;
-  left: 340px;
-  top: -32px;
+.menu_restaurant .coeur_vide_menu {
   font-size: 25px;
+  position: relative;
+  bottom: 35px;
+  left: 330px;
+  color: black;
+}
+.menu_restaurant .coeur_plein_menu {
+  font-size: 25px;
+  position: relative;
+  left: 301px;
+  bottom: 35px;
+  color: transparent;
+  opacity: 0;
+  transition-duration: 0.4s;
+  transition-property: opacity;
+}
+.menu_restaurant .coeur_plein_menu:hover {
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  opacity: 1;
 }
 .menu_restaurant h2 {
   margin: 0;
   font-size: 17px;
-  margin-bottom: 20px;
-  border-bottom: solid #99E2D0 3px;
   margin-top: 30px;
+}
+.menu_restaurant .border_titre {
+  border-bottom: solid #99E2D0;
+  margin-bottom: 20px;
+  width: 45px;
+  border-width: 3px;
 }
 
 .vignette_menu {
@@ -250,24 +258,6 @@ footer a:hover {
   box-shadow: 0px 6px 10px #bbb8b8;
 }
 
-.icone_check {
-  -webkit-animation-name: check_menu;
-          animation-name: check_menu;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-.icone_check:hover {
-  transform: rotate(180deg);
-}
-
-@media screen and (min-width: 426px) {
-  body {
-    width: 1200px;
-    max-width: 1200px;
-  }
-}
 @font-face {
   font-family: "robotoregular";
   src: url("Roboto-Regular-webfont.eot");
@@ -584,7 +574,7 @@ body {
 
   .container_fonctionnement, .container_restaurants {
     display: flex;
-    max-width: 1200px;
+    max-width: 100%;
     justify-content: space-between;
   }
 
@@ -593,7 +583,23 @@ body {
     padding-right: 2%;
   }
   .liste_restaurants .vignette_restaurant {
-    max-width: 23%;
+    width: 23%;
+    cursor: pointer;
+    transform: scale(1);
+    transition-duration: 0.2s;
+  }
+  .liste_restaurants .vignette_restaurant:hover {
+    transform: scale(1.1);
+  }
+  .liste_restaurants .vignette_restaurant .new {
+    bottom: 230px;
+    left: 170px;
+  }
+  .liste_restaurants .vignette_restaurant .coeur_vide_new, .liste_restaurants .vignette_restaurant .coeur_vide {
+    left: 230px;
+  }
+  .liste_restaurants .vignette_restaurant .coeur_plein_new, .liste_restaurants .vignette_restaurant .coeur_plein {
+    left: 201px;
   }
 
   .onglet_fonctionnement {
@@ -603,6 +609,7 @@ body {
   footer {
     padding: 2%;
     text-align: center;
+    cursor: pointer;
   }
   footer .logo_footer {
     width: 25%;
@@ -620,5 +627,11 @@ body {
   }
   footer .partenaire i {
     padding-right: 10px;
+  }
+
+  .vignette_menu:hover {
+    box-shadow: 0px 6px 10px #bbb8b8;
+    cursor: pointer;
+    margin-left: 10px;
   }
 }/*# sourceMappingURL=style_index.css.map */

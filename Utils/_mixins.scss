@@ -1,13 +1,35 @@
 @mixin button {
     background: $background_button;
-        box-shadow: $box-shadow_vignettes;
-        color: white;
-        height: 50px;
-        width: 250px;
-        border-radius: 50px;
-        border: 0;
-        cursor: pointer;
-        margin-bottom: 50px;
-        font-size: 18px;
+    box-shadow: $box-shadow_vignettes;
+    color: white;
+    height: 50px;
+    width: 250px;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    margin-bottom: 50px;
+    font-size: 18px;
 }
 
+@mixin coeur_vide{
+    font-size: 25px;
+    position: relative;
+    bottom: 35px;
+    left: 330px;
+    color: black;
+}
+@mixin coeur_plein{
+    font-size: 25px;
+    position: relative;
+    left: 301px;
+    bottom: 35px;
+    color: transparent;  
+    opacity: 0;
+    transition-duration: 0.4s;
+    transition-property: opacity;
+    &:hover{
+        background-image: linear-gradient($couleur_primaire, $couleur_secondaire);
+        background-clip: text;
+        opacity: 1;
+    }
+}

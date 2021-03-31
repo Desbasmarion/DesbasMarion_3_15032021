@@ -237,11 +237,7 @@ body{
     border-radius: 30px 30px 0 0;
     }
     .coeur_vide{
-        font-size: 25px;
-        position: relative;
-        bottom: 35px;
-        left: 330px;
-        color: black;
+        @include coeur_vide
     }
     .coeur_vide_new{
         font-size: 25px;
@@ -251,19 +247,7 @@ body{
         color: black;
     }
     .coeur_plein{
-        font-size: 25px;
-        position: relative;
-        left: 301px;
-        bottom: 35px;
-        color: transparent;  
-        opacity: 0;
-        transition-duration: 0.4s;
-        transition-property: opacity;
-        &:hover{
-            background-image: linear-gradient($couleur_primaire, $couleur_secondaire);
-            background-clip: text;
-            opacity: 1;
-        }
+        @include coeur_plein
     }
     .coeur_plein_new{
         font-size: 25px;
@@ -288,14 +272,30 @@ body{
     }
     .container_fonctionnement, .container_restaurants{
         display: flex;
-        max-width: 1200px;
+        max-width: 100%;
         justify-content: space-between;
     }
     .liste_restaurants{
         padding-left: 2%;
         padding-right: 2%;
         .vignette_restaurant{
-            max-width: 23%;
+            width: 23%;
+            cursor: pointer;
+            transform: scale(1);
+            transition-duration: 0.2s;
+            &:hover{
+                transform: scale(1.1);
+            }
+            .new{
+                bottom: 230px;
+                left: 170px;
+            }
+            .coeur_vide_new, .coeur_vide{
+                left: 230px;
+            }
+            .coeur_plein_new, .coeur_plein{
+                left: 201px;
+            }
         }
     }
     .onglet_fonctionnement{
@@ -304,6 +304,7 @@ body{
     footer{
         padding: 2%;
         text-align: center;
+        cursor: pointer;
         .logo_footer{
             width: 25%;
         }
@@ -322,5 +323,10 @@ body{
             }
         }
 
+    }
+    .vignette_menu:hover{
+        box-shadow: $box-shadow_hover;
+        cursor: pointer;
+        margin-left: 10px;
     }
 }
