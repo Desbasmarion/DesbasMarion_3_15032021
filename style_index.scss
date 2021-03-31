@@ -260,8 +260,8 @@ body{
         transition-property: opacity;
         &:hover{
             background-image: linear-gradient($couleur_primaire, $couleur_secondaire);
-            background-clip: text;
             opacity: 1;
+            background-clip: text;
         }
     }
 }
