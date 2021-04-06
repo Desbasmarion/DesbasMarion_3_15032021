@@ -1,3 +1,4 @@
+/*animation apparition vignettes menus*/
 @-webkit-keyframes apparition_menu {
   0% {
     opacity: 0;
@@ -18,6 +19,7 @@
     transform: translateY(0);
   }
 }
+/*animation loading spinner page d'accueil*/
 @-webkit-keyframes loading_spinner {
   0% {
     transform: translateY(0px);
@@ -52,6 +54,7 @@
     transform: translateY(15px);
   }
 }
+/*fond transparent pour loading spinner*/
 @-webkit-keyframes background_loading_spinner {
   from {
     background-color: transparent;
@@ -66,22 +69,6 @@
   }
   to {
     background-color: rgba(255, 255, 255, 0.904);
-  }
-}
-@-webkit-keyframes ckeck_menu {
-  from {
-    transform: translateX(-2000px);
-  }
-  to {
-    transform: translateX(0px);
-  }
-}
-@keyframes ckeck_menu {
-  from {
-    transform: translateX(-2000px);
-  }
-  to {
-    transform: translateX(0px);
   }
 }
 footer {
@@ -208,8 +195,7 @@ footer a:hover {
   margin-bottom: 20px;
   height: 70px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   padding-left: 7px;
   line-height: 25px;
   -webkit-animation: apparition_menu 1s 0.5s;
@@ -217,23 +203,58 @@ footer a:hover {
   opacity: 0;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
+  overflow: hidden;
+  align-items: center;
+  cursor: pointer;
 }
-.vignette_menu > p {
+.vignette_menu:hover > .check {
+  transform: translateX(0px);
+  width: 30%;
+}
+.vignette_menu:hover > .check i {
+  transform: rotate(360deg);
+}
+.vignette_menu .descriptif_menu {
+  width: 100%;
+}
+.vignette_menu .descriptif_menu span {
   margin: 0;
   margin-left: 5px;
   font-weight: 900;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.vignette_menu .ligne2_menu {
+.vignette_menu .descriptif_menu .ligne2_menu {
   display: flex;
   justify-content: space-between;
   width: 95%;
 }
-.vignette_menu .ligne2_menu p {
-  margin: 0;
-  margin-left: 5px;
+.vignette_menu .descriptif_menu .ligne2_menu span {
+  font-weight: normal;
 }
-.vignette_menu .ligne2_menu :nth-child(2) {
+.vignette_menu .descriptif_menu .ligne2_menu :nth-child(2) {
   font-weight: 900;
+  overflow: visible;
+}
+.vignette_menu .check {
+  width: 0;
+  height: 70px;
+  background-color: #99E2D0;
+  transform: translateX(230px);
+  transition: transform 0.7s, width 0.7s;
+  transition-timing-function: ease-in-out;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vignette_menu .check i {
+  color: white;
+  font-size: 30px;
+  transform: rotate(0);
+  transition: transform 0.7s 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 .bouton_commande {
@@ -627,11 +648,5 @@ body {
   }
   footer .partenaire i {
     padding-right: 10px;
-  }
-
-  .vignette_menu:hover {
-    box-shadow: 0px 6px 10px #bbb8b8;
-    cursor: pointer;
-    margin-left: 10px;
   }
 }/*# sourceMappingURL=style_index.css.map */
