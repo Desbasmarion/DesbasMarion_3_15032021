@@ -215,35 +215,35 @@ footer a:hover {
   transform: rotate(360deg);
 }
 .vignette_menu .descriptif_menu {
-  width: 100%;
-}
-.vignette_menu .descriptif_menu span {
-  margin: 0;
-  margin-left: 5px;
-  font-weight: 900;
+  width: 82%;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.vignette_menu .descriptif_menu .ligne2_menu {
-  display: flex;
-  justify-content: space-between;
-  width: 95%;
+.vignette_menu .descriptif_menu span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.vignette_menu .descriptif_menu .ligne2_menu span {
-  font-weight: normal;
-}
-.vignette_menu .descriptif_menu .ligne2_menu :nth-child(2) {
+.vignette_menu .descriptif_menu :nth-child(1) {
   font-weight: 900;
-  overflow: visible;
+}
+.vignette_menu .prix {
+  height: 70%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 15%;
+  font-weight: 900;
 }
 .vignette_menu .check {
   width: 0;
   height: 70px;
   background-color: #99E2D0;
   transform: translateX(230px);
-  transition: transform 0.7s, width 0.7s;
-  transition-timing-function: ease-in-out;
+  transition: transform 0.7s ease-in-out, width 0.7s ease-in-out;
   border-radius: 0 15px 15px 0;
   display: flex;
   justify-content: center;
@@ -253,8 +253,7 @@ footer a:hover {
   color: white;
   font-size: 30px;
   transform: rotate(0);
-  transition: transform 0.7s 0.2s;
-  transition-timing-function: ease-in-out;
+  transition: transform 0.7s 0.2s ease-in-out;
 }
 
 .bouton_commande {

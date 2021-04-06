@@ -33,3 +33,9 @@
         background-clip: text;
     }
 }
+
+@mixin overflow_menu{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
