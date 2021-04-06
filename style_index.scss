@@ -38,8 +38,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: background_loading_spinner 2.5s;
-    animation-timing-function: cubic-bezier(.03,.61,.92,.69);
+    animation: background_loading 1s;
 }
 .spinner1{
     animation: loading_spinner 0.3s 0.2s;
@@ -47,7 +46,7 @@ body{
     color: $couleur_primaire;
     font-size: 50px;
     animation-direction: alternate;
-    transform: translate(-2000px);
+    animation-fill-mode: forwards;
 }
 .spinner2{
     animation: loading_spinner 0.3s 0.3s;
@@ -55,7 +54,6 @@ body{
     color: $couleur_secondaire;
     font-size: 50px;
     animation-direction: alternate;
-    transform: translate(-2000px);
 }
 .spinner3{
     animation: loading_spinner 0.3s 0.4s;
@@ -63,7 +61,6 @@ body{
     color: $couleur_tertiaire;
     font-size: 50px;
     animation-direction: alternate;
-    transform: translate(-2000px);
 }
 .spinner4{
     animation: loading_spinner 0.3s 0.5s;
@@ -71,7 +68,6 @@ body{
     color: $couleur_primaire;
     font-size: 50px;
     animation-direction: alternate;
-    transform: translate(-2000px);
 }
 .spinner5{
     animation: loading_spinner 0.3s 0.6s;
@@ -79,15 +75,13 @@ body{
     color: $couleur_secondaire;
     font-size: 50px;
     animation-direction: alternate; 
-    transform: translate(-2000px);
 }
 .spinner6{
     animation: loading_spinner 0.3s 0.7s;
     animation-iteration-count: 6;
     color: $couleur_tertiaire;
     font-size: 50px;
-    animation-direction: alternate;
-    transform: translate(-2000px); 
+    animation-direction: alternate; 
 }
 /*fin loading spinner*/
 

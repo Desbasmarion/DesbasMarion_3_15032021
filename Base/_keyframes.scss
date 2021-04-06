@@ -14,6 +14,7 @@
 @keyframes loading_spinner{
     0%{
         transform: translateY(0px);
+        opacity: 0;
     }
     25%{
         transform: translateY(6px);
@@ -26,16 +27,18 @@
     }
     100%{
         transform: translateY(15px);
+        opacity: 1;
+    }
+}
+@keyframes background_loading {
+    from{
+        transform: translate(2000px);
+        opacity: 0;
+    }
+    to{
+        background-color: white;
+        transform: translate(0px);
     }
 }
 
-/*fond transparent pour loading spinner*/
-@keyframes background_loading_spinner{
-    from{
-        background-color: transparent;
-    }
-    to{
-        background-color: rgba(255, 255, 255, 0.904);
-    }
-}
 

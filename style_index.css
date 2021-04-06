@@ -23,6 +23,7 @@
 @-webkit-keyframes loading_spinner {
   0% {
     transform: translateY(0px);
+    opacity: 0;
   }
   25% {
     transform: translateY(6px);
@@ -35,11 +36,13 @@
   }
   100% {
     transform: translateY(15px);
+    opacity: 1;
   }
 }
 @keyframes loading_spinner {
   0% {
     transform: translateY(0px);
+    opacity: 0;
   }
   25% {
     transform: translateY(6px);
@@ -52,23 +55,27 @@
   }
   100% {
     transform: translateY(15px);
+    opacity: 1;
   }
 }
-/*fond transparent pour loading spinner*/
-@-webkit-keyframes background_loading_spinner {
+@-webkit-keyframes background_loading {
   from {
-    background-color: transparent;
+    transform: translate(2000px);
+    opacity: 0;
   }
   to {
-    background-color: rgba(255, 255, 255, 0.904);
+    background-color: white;
+    transform: translate(0px);
   }
 }
-@keyframes background_loading_spinner {
+@keyframes background_loading {
   from {
-    background-color: transparent;
+    transform: translate(2000px);
+    opacity: 0;
   }
   to {
-    background-color: rgba(255, 255, 255, 0.904);
+    background-color: white;
+    transform: translate(0px);
   }
 }
 footer {
@@ -121,7 +128,7 @@ footer a:hover {
   text-decoration: none;
   color: black;
   font-size: 20px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .photo_page_restaurant {
@@ -132,7 +139,7 @@ footer a:hover {
 }
 
 .logo_menus {
-  width: 100%;
+  width: 90%;
   text-align: center;
 }
 .logo_menus img {
@@ -157,13 +164,13 @@ footer a:hover {
   font-size: 25px;
   position: relative;
   bottom: 35px;
-  left: 330px;
+  left: 357px;
   color: black;
 }
 .menu_restaurant .coeur_plein_menu {
   font-size: 25px;
   position: relative;
-  left: 301px;
+  left: 328.3px;
   bottom: 35px;
   color: transparent;
   opacity: 0;
@@ -184,6 +191,7 @@ footer a:hover {
 .menu_restaurant .border_titre {
   border-bottom: solid #99E2D0;
   margin-bottom: 20px;
+  margin-top: 5px;
   width: 45px;
   border-width: 3px;
 }
@@ -307,10 +315,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  -webkit-animation: background_loading_spinner 2.5s;
-          animation: background_loading_spinner 2.5s;
-  -webkit-animation-timing-function: cubic-bezier(0.03, 0.61, 0.92, 0.69);
-          animation-timing-function: cubic-bezier(0.03, 0.61, 0.92, 0.69);
+  -webkit-animation: background_loading 1s;
+          animation: background_loading 1s;
 }
 
 .spinner1 {
@@ -322,7 +328,8 @@ body {
   font-size: 50px;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  transform: translate(-2000px);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .spinner2 {
@@ -334,7 +341,6 @@ body {
   font-size: 50px;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  transform: translate(-2000px);
 }
 
 .spinner3 {
@@ -346,7 +352,6 @@ body {
   font-size: 50px;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  transform: translate(-2000px);
 }
 
 .spinner4 {
@@ -358,7 +363,6 @@ body {
   font-size: 50px;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  transform: translate(-2000px);
 }
 
 .spinner5 {
@@ -370,7 +374,6 @@ body {
   font-size: 50px;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  transform: translate(-2000px);
 }
 
 .spinner6 {
@@ -382,7 +385,6 @@ body {
   font-size: 50px;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  transform: translate(-2000px);
 }
 
 /*fin loading spinner*/
@@ -543,7 +545,7 @@ body {
   font-size: 25px;
   position: relative;
   bottom: 35px;
-  left: 330px;
+  left: 357px;
   color: black;
 }
 .vignette_restaurant .coeur_vide_new {
@@ -556,7 +558,7 @@ body {
 .vignette_restaurant .coeur_plein {
   font-size: 25px;
   position: relative;
-  left: 301px;
+  left: 328.3px;
   bottom: 35px;
   color: transparent;
   opacity: 0;
