@@ -12,32 +12,29 @@
 
 /*animation loading spinner page d'accueil*/
 @keyframes loading_spinner{
-    0%{
-        transform: translateY(0px);
-        opacity: 0;
-    }
-    25%{
-        transform: translateY(6px);
-    }
-    50%{
-        transform: translateY(9px);
-    }
-    75%{
-        transform: translateY(12px);
-    }
-    100%{
-        transform: translateY(15px);
+    from{
+        transform: translateY(-20px);
         opacity: 1;
+    }
+    to{
+        transform: translateY(20px);
+        opacity: 0.5;
     }
 }
 @keyframes background_loading {
     from{
-        transform: translate(2000px);
-        opacity: 0;
+        opacity: 1;
+        position:fixed;
+        background-color: white;
+        top: 0px;
+        z-index: 200;
     }
     to{
+        opacity: 1;
         background-color: white;
-        transform: translate(0px);
+        top: 0;
+        position: fixed;
+        z-index: 200;
     }
 }
 

@@ -21,61 +21,55 @@
 }
 /*animation loading spinner page d'accueil*/
 @-webkit-keyframes loading_spinner {
-  0% {
-    transform: translateY(0px);
-    opacity: 0;
-  }
-  25% {
-    transform: translateY(6px);
-  }
-  50% {
-    transform: translateY(9px);
-  }
-  75% {
-    transform: translateY(12px);
-  }
-  100% {
-    transform: translateY(15px);
+  from {
+    transform: translateY(-20px);
     opacity: 1;
+  }
+  to {
+    transform: translateY(20px);
+    opacity: 0.5;
   }
 }
 @keyframes loading_spinner {
-  0% {
-    transform: translateY(0px);
-    opacity: 0;
-  }
-  25% {
-    transform: translateY(6px);
-  }
-  50% {
-    transform: translateY(9px);
-  }
-  75% {
-    transform: translateY(12px);
-  }
-  100% {
-    transform: translateY(15px);
+  from {
+    transform: translateY(-20px);
     opacity: 1;
+  }
+  to {
+    transform: translateY(20px);
+    opacity: 0.5;
   }
 }
 @-webkit-keyframes background_loading {
   from {
-    transform: translate(2000px);
-    opacity: 0;
+    opacity: 1;
+    position: fixed;
+    background-color: white;
+    top: 0px;
+    z-index: 200;
   }
   to {
+    opacity: 1;
     background-color: white;
-    transform: translate(0px);
+    top: 0;
+    position: fixed;
+    z-index: 200;
   }
 }
 @keyframes background_loading {
   from {
-    transform: translate(2000px);
-    opacity: 0;
+    opacity: 1;
+    position: fixed;
+    background-color: white;
+    top: 0px;
+    z-index: 200;
   }
   to {
+    opacity: 1;
     background-color: white;
-    transform: translate(0px);
+    top: 0;
+    position: fixed;
+    z-index: 200;
   }
 }
 footer {
@@ -164,13 +158,13 @@ footer a:hover {
   font-size: 25px;
   position: relative;
   bottom: 35px;
-  left: 357px;
+  left: 335px;
   color: black;
 }
 .menu_restaurant .coeur_plein_menu {
   font-size: 25px;
   position: relative;
-  left: 328.3px;
+  left: 306px;
   bottom: 35px;
   color: transparent;
   opacity: 0;
@@ -206,8 +200,8 @@ footer a:hover {
   justify-content: space-between;
   padding-left: 7px;
   line-height: 25px;
-  -webkit-animation: apparition_menu 1s 0.5s;
-          animation: apparition_menu 1s 0.5s;
+  -webkit-animation: apparition_menu 2s 0.5s;
+          animation: apparition_menu 2s 0.5s;
   opacity: 0;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
@@ -309,82 +303,52 @@ body {
 
 /*loading spinner*/
 .loadingspinner {
+  width: 100%;
   height: 100%;
-  width: 425px;
-  position: absolute;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  -webkit-animation: background_loading 1s;
-          animation: background_loading 1s;
+  -webkit-animation: 2s background_loading backwards;
+          animation: 2s background_loading backwards;
+  position: absolute;
+  top: -1000px;
+  opacity: 0;
 }
-
-.spinner1 {
-  -webkit-animation: loading_spinner 0.3s 0.2s;
-          animation: loading_spinner 0.3s 0.2s;
-  -webkit-animation-iteration-count: 6;
-          animation-iteration-count: 6;
+.loadingspinner div {
+  font-size: 30px;
+  animation: loading_spinner 0.4s infinite alternate-reverse both;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+.loadingspinner .spinner1 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
   color: #9356DC;
-  font-size: 50px;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
-
-.spinner2 {
-  -webkit-animation: loading_spinner 0.3s 0.3s;
-          animation: loading_spinner 0.3s 0.3s;
-  -webkit-animation-iteration-count: 6;
-          animation-iteration-count: 6;
+.loadingspinner .spinner2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
   color: #FF79DA;
-  font-size: 50px;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
 }
-
-.spinner3 {
-  -webkit-animation: loading_spinner 0.3s 0.4s;
-          animation: loading_spinner 0.3s 0.4s;
-  -webkit-animation-iteration-count: 6;
-          animation-iteration-count: 6;
+.loadingspinner .spinner3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
   color: #99E2D0;
-  font-size: 50px;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
 }
-
-.spinner4 {
-  -webkit-animation: loading_spinner 0.3s 0.5s;
-          animation: loading_spinner 0.3s 0.5s;
-  -webkit-animation-iteration-count: 6;
-          animation-iteration-count: 6;
+.loadingspinner .spinner4 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
   color: #9356DC;
-  font-size: 50px;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
 }
-
-.spinner5 {
-  -webkit-animation: loading_spinner 0.3s 0.6s;
-          animation: loading_spinner 0.3s 0.6s;
-  -webkit-animation-iteration-count: 6;
-          animation-iteration-count: 6;
+.loadingspinner .spinner5 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
   color: #FF79DA;
-  font-size: 50px;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
 }
-
-.spinner6 {
-  -webkit-animation: loading_spinner 0.3s 0.7s;
-          animation: loading_spinner 0.3s 0.7s;
-  -webkit-animation-iteration-count: 6;
-          animation-iteration-count: 6;
+.loadingspinner .spinner6 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   color: #99E2D0;
-  font-size: 50px;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
 }
 
 /*fin loading spinner*/
@@ -545,7 +509,7 @@ body {
   font-size: 25px;
   position: relative;
   bottom: 35px;
-  left: 357px;
+  left: 335px;
   color: black;
 }
 .vignette_restaurant .coeur_vide_new {
@@ -558,7 +522,7 @@ body {
 .vignette_restaurant .coeur_plein {
   font-size: 25px;
   position: relative;
-  left: 328.3px;
+  left: 306px;
   bottom: 35px;
   color: transparent;
   opacity: 0;
@@ -649,5 +613,13 @@ body {
   }
   footer .partenaire i {
     padding-right: 10px;
+  }
+
+  .loadingspinner > div {
+    font-size: 60px;
+  }
+
+  .retour_accueil {
+    font-size: 35px;
   }
 }/*# sourceMappingURL=style_index.css.map */
