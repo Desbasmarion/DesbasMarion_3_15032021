@@ -30,7 +30,7 @@
     &:hover{
         background-image: linear-gradient($couleur_primaire, $couleur_secondaire);
         opacity: 1;
-        background-clip: text;
+        -webkit-background-clip: text;
     }
 }
 
