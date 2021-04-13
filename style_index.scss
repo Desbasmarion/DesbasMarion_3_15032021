@@ -252,8 +252,7 @@ body{
 
 @media screen and (min-width: 426px){
     body{
-        width: 1200px;
-        max-width: 1200px;
+        min-width: 100%;
     }
     .container_fonctionnement, .container_restaurants{
         display: flex;
@@ -263,6 +262,7 @@ body{
     .liste_restaurants{
         padding-left: 2%;
         padding-right: 2%;
+        width: 100%;
         .vignette_restaurant{
             width: 23%;
             cursor: pointer;
@@ -273,20 +273,47 @@ body{
             }
             .new{
                 bottom: 230px;
-                left: 170px;
+                left: 110px;
             }
-            .coeur_vide_new, .coeur_vide{
-                left: 230px;
+            .coeur_vide_new{
+                left: 140px;
+                top: -60px;
+                font-size: 20px;
             }
-            .coeur_plein_new, .coeur_plein{
-                left: 201px;
+            .coeur_vide{
+                left: 140px;
+                top: -25px;
+                font-size: 20px;
+            }
+            .coeur_plein_new{
+                left: 116px;
+                top: -60px;
+                font-size: 20px;
+            }
+            .coeur_plein{
+                font-size: 20px;
+                left: 313px;
+                bottom: 25px;
             }
         }
     }
     .onglet_fonctionnement{
         width: 30%;
+        span{
+            right: 20px;
+        }
+        i{
+            right: 20px;
+        }
+        p{
+            right: 10px;
+        }
+    }
+    .menu{
+        width: 97%;
     }
     footer{
+        width: 100%;
         padding: 2%;
         text-align: center;
         cursor: pointer;

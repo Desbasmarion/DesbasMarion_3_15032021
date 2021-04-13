@@ -551,8 +551,7 @@ body {
 
 @media screen and (min-width: 426px) {
   body {
-    width: 1200px;
-    max-width: 1200px;
+    min-width: 100%;
   }
 
   .container_fonctionnement, .container_restaurants {
@@ -564,6 +563,7 @@ body {
   .liste_restaurants {
     padding-left: 2%;
     padding-right: 2%;
+    width: 100%;
   }
   .liste_restaurants .vignette_restaurant {
     width: 23%;
@@ -576,20 +576,48 @@ body {
   }
   .liste_restaurants .vignette_restaurant .new {
     bottom: 230px;
-    left: 170px;
+    left: 110px;
   }
-  .liste_restaurants .vignette_restaurant .coeur_vide_new, .liste_restaurants .vignette_restaurant .coeur_vide {
-    left: 230px;
+  .liste_restaurants .vignette_restaurant .coeur_vide_new {
+    left: 140px;
+    top: -60px;
+    font-size: 20px;
   }
-  .liste_restaurants .vignette_restaurant .coeur_plein_new, .liste_restaurants .vignette_restaurant .coeur_plein {
-    left: 201px;
+  .liste_restaurants .vignette_restaurant .coeur_vide {
+    left: 140px;
+    top: -25px;
+    font-size: 20px;
+  }
+  .liste_restaurants .vignette_restaurant .coeur_plein_new {
+    left: 116px;
+    top: -60px;
+    font-size: 20px;
+  }
+  .liste_restaurants .vignette_restaurant .coeur_plein {
+    font-size: 20px;
+    left: 313px;
+    bottom: 25px;
   }
 
   .onglet_fonctionnement {
     width: 30%;
   }
+  .onglet_fonctionnement span {
+    right: 20px;
+  }
+  .onglet_fonctionnement i {
+    right: 20px;
+  }
+  .onglet_fonctionnement p {
+    right: 10px;
+  }
+
+  .menu {
+    width: 97%;
+  }
 
   footer {
+    width: 100%;
     padding: 2%;
     text-align: center;
     cursor: pointer;
