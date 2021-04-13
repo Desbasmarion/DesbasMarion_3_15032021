@@ -254,7 +254,7 @@ body{
     body{
         width: 100%;
     }
-    .container_fonctionnement, .container_restaurants{
+    .container_fonctionnement{
         display: flex;
         max-width: 100%;
         justify-content: space-between;
@@ -264,8 +264,10 @@ body{
         padding-right: 2%;
         width: 100%;
         .container_restaurants{
+            display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+            width: 100%;
             .vignette_restaurant{
                 width: 300px;
                 cursor: pointer;

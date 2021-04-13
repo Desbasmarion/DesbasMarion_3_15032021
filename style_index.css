@@ -554,7 +554,7 @@ body {
     width: 100%;
   }
 
-  .container_fonctionnement, .container_restaurants {
+  .container_fonctionnement {
     display: flex;
     max-width: 100%;
     justify-content: space-between;
@@ -566,8 +566,10 @@ body {
     width: 100%;
   }
   .liste_restaurants .container_restaurants {
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    width: 100%;
   }
   .liste_restaurants .container_restaurants .vignette_restaurant {
     width: 300px;
