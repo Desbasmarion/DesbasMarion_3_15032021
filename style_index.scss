@@ -263,36 +263,41 @@ body{
         padding-left: 2%;
         padding-right: 2%;
         width: 100%;
+        .container_restaurants{
+            flex-wrap: wrap;
+        }
         .vignette_restaurant{
-            width: 23%;
+            width: 45%;
             cursor: pointer;
             transform: scale(1);
             transition-duration: 0.2s;
+            margin-left: 2px;
+            margin-right: 2px;
             &:hover{
                 transform: scale(1.1);
             }
             .new{
                 bottom: 230px;
-                left: 110px;
+                left: 250px;
             }
             .coeur_vide_new{
-                left: 140px;
+                left: 300px;
                 top: -60px;
                 font-size: 20px;
             }
             .coeur_vide{
-                left: 140px;
+                left: 300px;
                 top: -25px;
                 font-size: 20px;
             }
             .coeur_plein_new{
-                left: 116px;
+                left: 276px;
                 top: -60px;
                 font-size: 20px;
             }
             .coeur_plein{
                 font-size: 20px;
-                left: 313px;
+                left: 276px;
                 bottom: 25px;
             }
         }
