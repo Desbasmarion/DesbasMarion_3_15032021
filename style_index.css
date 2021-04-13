@@ -567,41 +567,44 @@ body {
   }
   .liste_restaurants .container_restaurants {
     flex-wrap: wrap;
+    justify-content: space-around;
   }
-  .liste_restaurants .vignette_restaurant {
-    width: 45%;
+  .liste_restaurants .container_restaurants .vignette_restaurant {
+    width: 300px;
     cursor: pointer;
     transform: scale(1);
     transition-duration: 0.2s;
     margin-left: 2px;
     margin-right: 2px;
   }
-  .liste_restaurants .vignette_restaurant:hover {
+  .liste_restaurants .container_restaurants .vignette_restaurant:hover {
     transform: scale(1.1);
   }
-  .liste_restaurants .vignette_restaurant .new {
-    bottom: 230px;
+  .liste_restaurants .container_restaurants .vignette_restaurant .new {
+    left: 200px;
+    position: absolute;
+    width: 20%;
+    height: 10%;
+  }
+  .liste_restaurants .container_restaurants .vignette_restaurant .coeur_vide_new {
     left: 250px;
-  }
-  .liste_restaurants .vignette_restaurant .coeur_vide_new {
-    left: 300px;
-    top: -60px;
+    top: -35px;
     font-size: 20px;
   }
-  .liste_restaurants .vignette_restaurant .coeur_vide {
-    left: 300px;
-    top: -25px;
+  .liste_restaurants .container_restaurants .vignette_restaurant .coeur_plein_new {
+    left: 225px;
+    top: -35px;
     font-size: 20px;
   }
-  .liste_restaurants .vignette_restaurant .coeur_plein_new {
-    left: 276px;
-    top: -60px;
+  .liste_restaurants .container_restaurants .vignette_restaurant .coeur_vide {
+    left: 250px;
+    top: -40px;
     font-size: 20px;
   }
-  .liste_restaurants .vignette_restaurant .coeur_plein {
+  .liste_restaurants .container_restaurants .vignette_restaurant .coeur_plein {
     font-size: 20px;
-    left: 276px;
-    bottom: 25px;
+    left: 222px;
+    top: -40px;
   }
 
   .onglet_fonctionnement {

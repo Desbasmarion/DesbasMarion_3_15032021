@@ -265,40 +265,43 @@ body{
         width: 100%;
         .container_restaurants{
             flex-wrap: wrap;
-        }
-        .vignette_restaurant{
-            width: 45%;
-            cursor: pointer;
-            transform: scale(1);
-            transition-duration: 0.2s;
-            margin-left: 2px;
-            margin-right: 2px;
-            &:hover{
-                transform: scale(1.1);
-            }
-            .new{
-                bottom: 230px;
-                left: 250px;
-            }
-            .coeur_vide_new{
-                left: 300px;
-                top: -60px;
-                font-size: 20px;
-            }
-            .coeur_vide{
-                left: 300px;
-                top: -25px;
-                font-size: 20px;
-            }
-            .coeur_plein_new{
-                left: 276px;
-                top: -60px;
-                font-size: 20px;
-            }
-            .coeur_plein{
-                font-size: 20px;
-                left: 276px;
-                bottom: 25px;
+            justify-content: space-around;
+            .vignette_restaurant{
+                width: 300px;
+                cursor: pointer;
+                transform: scale(1);
+                transition-duration: 0.2s;
+                margin-left: 2px;
+                margin-right: 2px;
+                &:hover{
+                    transform: scale(1.1);
+                }
+                .new{
+                    left: 200px;
+                    position: absolute;
+                    width: 20%;
+                    height: 10%;
+                }
+                .coeur_vide_new{
+                    left: 250px;
+                    top: -35px;
+                    font-size: 20px;                       
+                }
+                .coeur_plein_new{
+                    left: 225px;
+                    top: -35px;
+                    font-size: 20px;
+                }
+                .coeur_vide{
+                    left: 250px;
+                    top: -40px;
+                    font-size: 20px;
+                }
+                .coeur_plein{
+                    font-size: 20px;
+                    left: 222px;
+                    top: -40px;
+                }
             }
         }
     }
