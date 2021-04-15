@@ -27,7 +27,7 @@
 body{
     margin-left: auto;
     margin-right: auto;
-    width: 425px;
+    width: 100%;
 }
 
 /*loading spinner*/
@@ -90,10 +90,10 @@ body{
     text-align: center;
     input{
         border: none;
-        width: 145px;
+        text-align: center;
         height: 100%;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 15px;
         color: black;
         margin-left: 10px;
         background-color: #EAEAEA;
@@ -119,7 +119,7 @@ body{
         box-shadow: $box-shadow_vignettes;
         color: white;
         height: 45px;
-        width: 250px;
+        width: 70%;
         border-radius: 50px;
         border: 0;
         cursor: pointer;
@@ -145,6 +145,7 @@ body{
     border-radius: 15px;
     margin-bottom: 20px;
     height: 60px;
+    width: 100%;
     background-color: $background_color;
     box-shadow: 0px 6px 10px #DDDDDD;
     justify-content: space-around;
@@ -157,111 +158,129 @@ body{
         border-radius: 50px;
         color: white;
         background-color: $couleur_primaire;
-        width: 22px;
+        width: 8%;
         height: 22px;
         text-align: center;
-        position: relative;
-        right: 40px;
+        position: absolute;
+        left: 1px;
     }
     i{
-        position: relative;
-        right: 60px;
-    }
-    p{
-        position: relative;
-        right: 80px;
+        position: absolute;
+        left: 50px;
     }
 }
 .liste_restaurants{
     margin-top: 80px;
     background-color: $background_color;
-    padding-left: 5%;
-    padding-right: 5%;
     padding-bottom: 50px;
     height:auto;
     h2{
         padding-top: 30px;
+        padding-left: 2%;
     }
 }
 .vignette_restaurant{
     border: solid $background_color 0;
     border-radius: 30px;
     background-color: white;
-    height: 260px;
+    height: 230px;
+    width: 95%;
     margin-top: 30px;
     box-shadow: $box-shadow_vignettes;
+    margin-right: auto;
+    margin-left: auto;
     a{
         text-decoration: none;
-    }
-    h3, p{
-        color: black;
-        margin: 0;
-        margin-left: 10px;
-        margin-top: 5px;
-    }
-    .new{
-        width: 75px;
-        height: 30px;
-        background-color: $couleur_tertiaire;
-        font-weight: 700;
-        color: #048A69;
-        font-size: 14px;
         position: relative;
-        bottom: 210px;
-        left: 275px;
+        max-width: 100%;
         display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .photo_restaurant{
-    width: 100%;
-    object-fit: cover;
-    height: 70%;
-    border-radius: 30px 30px 0 0;
-    }
-    .coeur_vide{
-        @include coeur_vide
-    }
-    .coeur_vide_new{
-        font-size: 25px;
-        position: relative;
-        bottom: 70px;
-        left: 330px;
-        color: black;
-    }
-    .coeur_plein{
-        @include coeur_plein
-    }
-    .coeur_plein_new{
-        font-size: 25px;
-        position: relative;
-        left: 301px;
-        bottom: 70px;
-        color: transparent;  
-        opacity: 0;
-        transition-duration: 0.4s;
-        transition-property: opacity;
-        &:hover{
-            background-image: linear-gradient($couleur_primaire, $couleur_secondaire);
-            opacity: 1;
-            -webkit-background-clip: text;
+        flex-direction: column;
+        height: 100%;
+        .container_descriptif{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-left: 2%;
+            margin-right: 2%;
+            h3, p{
+            color: black;
+            font-size: 15px;
+            margin: 0;
+            }
+            .coeur_vide{
+                @include coeur_vide;
+            }
+            .coeur_vide_new{
+                @include coeur_vide;
+                font-size: 20px;
+                color: black;
+            }
+            .coeur_plein{
+                @include coeur_plein;
+            }
+            .coeur_plein_new{
+                @include coeur_plein;
+                font-size: 20px;
+                color: transparent;  
+                opacity: 0;
+                transition-duration: 0.4s;
+                transition-property: opacity;
+                position: absolute;
+                right: 5.5px;
+                &:hover{
+                    background-image: linear-gradient($couleur_primaire, $couleur_secondaire);
+                    opacity: 1;
+                    -webkit-background-clip: text;
+                }
+            }
+        }
+        .new{
+            background-color: #99E2D0;
+            font-weight: 700;
+            color: #048A69;
+            width: auto;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 12px;
+        }
+        .photo_restaurant{
+        width: 100%;
+        object-fit: cover;
+        height: 70%;
+        border-radius: 30px 30px 0 0;
         }
     }
 }
 
 
 @media screen and (min-width: 426px){
-    body{
-        width: 100%;
+    .en_tete button{
+        width: 50%;
     }
     .container_fonctionnement{
         display: flex;
-        max-width: 100%;
         justify-content: space-between;
+        width: 100%;
+        .onglet_fonctionnement{
+            width: 30%;
+            margin: 0;
+            position: relative;
+            span{
+                width: 20px;
+                height: 20px;
+                left: -10px;
+            }
+            i{
+                position: relative;
+                left: 0;
+            }
+            p{
+                font-size: 12px;
+            }
+        }
     }
     .liste_restaurants{
-        padding-left: 2%;
-        padding-right: 2%;
         width: 100%;
         .container_restaurants{
             display: flex;
@@ -273,57 +292,19 @@ body{
                 cursor: pointer;
                 transform: scale(1);
                 transition-duration: 0.2s;
-                margin-left: 2px;
-                margin-right: 2px;
                 &:hover{
                     transform: scale(1.1);
-                }
-                .new{
-                    left: 200px;
-                    position: absolute;
-                    width: 20%;
-                    height: 10%;
-                }
-                .coeur_vide_new{
-                    left: 250px;
-                    top: -35px;
-                    font-size: 20px;                       
-                }
-                .coeur_plein_new{
-                    left: 225px;
-                    top: -35px;
-                    font-size: 20px;
-                }
-                .coeur_vide{
-                    left: 250px;
-                    top: -40px;
-                    font-size: 20px;
-                }
-                .coeur_plein{
-                    font-size: 20px;
-                    left: 222px;
-                    top: -40px;
                 }
             }
         }
     }
-    .onglet_fonctionnement{
-        width: 30%;
-        span{
-            right: 20px;
-        }
-        i{
-            right: 20px;
-        }
-        p{
-            right: 10px;
-        }
+    .menu_restaurant .border_titre{
+        width: 5%;
     }
     .menu{
         width: 97%;
     }
     footer{
-        width: 100%;
         padding: 2%;
         text-align: center;
         cursor: pointer;

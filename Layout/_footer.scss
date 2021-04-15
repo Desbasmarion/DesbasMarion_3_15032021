@@ -14,7 +14,7 @@ footer{
     .proposer_restaurant, .partenaire{
         display: flex;
         align-items: center;
-        width: 52%;
+        width: 60%;
         justify-content: space-between;
         height: 30px;
         font-weight: 600;
@@ -23,11 +23,12 @@ footer{
         }
     }
     .partenaire{
-        width: 43%;
+        width: 50%;
     }
     p{
         margin-top: 5px;
         margin-bottom: 5px;
+        font-size: 13px;
         &:hover{
             color: $couleur_tertiaire;
         }
@@ -35,6 +36,7 @@ footer{
     a{
         text-decoration: none;
         color: white;
+        font-size: 13px;
         &:hover{
             color: $couleur_tertiaire;
         }

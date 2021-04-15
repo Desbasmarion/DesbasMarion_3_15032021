@@ -4,7 +4,7 @@
         text-decoration: none;
         color: black;
         font-size: 20px;
-        margin-left: 20px;
+        margin-left: 3%;
     }
 }
 .photo_page_restaurant{
@@ -27,16 +27,30 @@
     padding-right: 5%;
     padding-left: 5%;
     margin-bottom: -50px;
-    h1{
-        margin: 0;
-        padding-top: 40px;
-        font-family: shrikhand;
-    }
-    .coeur_vide_menu{
-        @include coeur_vide
-    }
-    .coeur_plein_menu{
-        @include coeur_plein
+    .ligne1_menu{
+        display: flex;
+        justify-content: space-between;
+        height: 45px;
+        padding-top: 15px;
+        align-items: center;
+        padding-right: 2%;
+        padding-right: 2%;
+        h1{
+            font-family: shrikhand;
+            font-size: 25px;
+        }
+        .coeur_vide_menu{
+            @include coeur_vide;
+            font-size: 20px;
+            position:absolute;
+            right: 40px;
+        }
+        .coeur_plein_menu{
+            @include coeur_plein;
+            position: absolute;
+            font-size: 20px;
+            right: 40px;
+        }
     }
     h2{
         margin: 0;
@@ -47,7 +61,7 @@
         border-bottom: solid $couleur_tertiaire;
         margin-bottom: 20px;
         margin-top: 5px;
-        width: 45px;
+        width: 10%;
         border-width: 3px;
     }
 }

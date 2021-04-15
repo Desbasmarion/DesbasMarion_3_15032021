@@ -13,16 +13,10 @@
 
 @mixin coeur_vide{
     font-size: 25px;
-    position: relative;
-    bottom: 35px;
-    left: 335px;
     color: black;
 }
 @mixin coeur_plein{
     font-size: 25px;
-    position: relative;
-    left: 306px;
-    bottom: 35px;
     color: transparent;  
     opacity: 0;
     transition-duration: 0.4s;
